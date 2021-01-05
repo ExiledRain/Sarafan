@@ -10,6 +10,6 @@ Used frameworks and technologies:
 * Webpack
 * Vue.js
 
-* Jva 8
+* Java 8
 * Gradle
 * PostgreSQL
