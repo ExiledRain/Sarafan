@@ -10,13 +10,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("message")
 public class MessageController {
-    public final MessageRepo messageRepo;
-    private int counter = 4;
+    private final MessageRepo messageRepo;
 
     @Autowired
     public MessageController(MessageRepo messageRepo) {
@@ -46,7 +44,7 @@ public class MessageController {
             @PathVariable("id") Message messageFromDb,
             @RequestBody Message message
     ) {
-        BeanUtils.copyProperties(message,messageFromDb,"id");
+        BeanUtils.copyProperties(message, messageFromDb, "id");
 
         return messageRepo.save(messageFromDb);
     }

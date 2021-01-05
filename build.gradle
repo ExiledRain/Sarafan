@@ -29,6 +29,9 @@ dependencies {
     // https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-core
     compile group: 'com.sun.xml.bind', name: 'jaxb-core', version: '3.0.0'
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+//    compile('org.springframework.session:spring-session-jdbc')
+// https://mvnrepository.com/artifact/org.springframework.session/spring-session-jdbc
+//    compile group: 'org.springframework.session', name: 'spring-session-jdbc', version: '2.4.1'
 
 
 }
