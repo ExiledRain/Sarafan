@@ -14,25 +14,21 @@
         <a href="/login">Google</a>
       </v-container>
       <v-container v-if="profile">
-        <messages-list :messages="messages" />
+        <messages-list />
       </v-container>
     </v-content>
   </v-app>
 </template>
 
 <script>
+import mapSate from 'vuex'
 import MessagesList from 'components/messages/MessageList.vue'
 import { addHandler } from 'util/ws'
 export default {
   components: {
     MessagesList
   },
-  data() {
-    return {
-      messages: frontendData.messages,
-      profile: frontendData.profile
-    }
-  },
+  computed: mapState([profile]),
   created() {
     addHandler(data => {
       if (data.objectType === 'MESSAGE') {
